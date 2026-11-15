@@ -1,0 +1,30 @@
+{
+  "tracks": [
+    {
+      "type": "video",
+      "name": "Main",
+      "clips": [
+        { "file": "footage/intro.mp4", "in": 2.5, "duration": 4, "volume": 0 },
+        { "file": "footage/screenshot.png", "duration": 3, "fill": true },
+        { "file": "footage/demo.mp4", "in": 10, "end": 15, "speed": 1.5, "volume": 0 }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Overlay",
+      "clips": [
+        { "file": "logo.png", "start": 1, "end": 6, "width": 300, "x": 1700, "y": 140, "opacity": 0.9 }
+      ]
+    },
+    {
+      "type": "audio",
+      "name": "Voice",
+      "clips": [{ "file": "audio/voice.wav", "start": 0 }]
+    },
+    {
+      "type": "audio",
+      "name": "Music",
+      "clips": [{ "file": "music.mp3", "start": 0, "end": 12, "volume": 0.1 }]
+    }
+  ]
+}
