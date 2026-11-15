@@ -23,15 +23,42 @@ It does **not** write text, captions, stickers, effects, filters, transitions, a
 
 ## Install
 
-Copy this folder into your agent's skills directory under the name `capcut-timeline`. For Claude Code:
+Pick whichever fits you. After installing, just ask your agent, for example: *"Put these three clips on my CapCut project 'Demo' with the voiceover underneath."*
+
+### Any agent (Claude Code, Cursor, Codex, Copilot, Windsurf, Gemini, ...)
 
 ```bash
-git clone https://github.com/pcwikiacademy/capcut-agent-skill.git ~/.claude/skills/capcut-timeline
+npx skills add pcwikiacademy/capcut-agent-skill
 ```
 
-Then just ask the agent, for example: *"Put these three clips on my CapCut project 'Demo' with the voiceover underneath."*
+It detects the agents on your machine and asks where to install. Add `-g` to install for all projects. Needs Node.js 22.20+.
+
+### Claude Code plugin
+
+Inside Claude Code:
+
+```
+/plugin install capcut-timeline --marketplace pcwikiacademy/capcut-agent-skill
+```
+
+On older Claude Code versions, run these two instead:
+
+```
+/plugin marketplace add pcwikiacademy/capcut-agent-skill
+/plugin install capcut-timeline@pcwikiacademy
+```
+
+### Manual download (no terminal)
+
+1. Download [capcut-timeline.zip](https://github.com/pcwikiacademy/capcut-agent-skill/releases/latest/download/capcut-timeline.zip).
+2. Extract it into your agent's skills folder, so you end up with a `capcut-timeline` folder containing `SKILL.md`. For Claude Code that is `C:\Users\<you>\.claude\skills\` on Windows or `~/.claude/skills/` on macOS.
+3. Restart the agent.
+
+> The skill edits CapCut files on your own computer, so it needs a local agent such as Claude Code. It does not work in the claude.ai web chat, which runs in a cloud sandbox.
 
 ## Manual usage
+
+Run from the `skills/capcut-timeline` folder:
 
 ```bash
 bun scripts/capcut.ts list
@@ -47,7 +74,7 @@ bun scripts/capcut.ts restore <project>
 
 ## Timeline file
 
-A timeline is a JSON file describing tracks and clips. See [references/timeline-spec.md](references/timeline-spec.md) for the format and [assets/example-timeline.json](assets/example-timeline.json) for an example.
+A timeline is a JSON file describing tracks and clips. See [timeline-spec.md](skills/capcut-timeline/references/timeline-spec.md) for the format and [example-timeline.json](skills/capcut-timeline/assets/example-timeline.json) for an example.
 
 ## Safety
 
@@ -59,11 +86,14 @@ A timeline is a JSON file describing tracks and clips. See [references/timeline-
 ## Project layout
 
 ```
-SKILL.md                 Instructions the agent reads
-scripts/capcut.ts        CLI entry point
-scripts/lib/             Draft reading, writing, templates, media probing
-references/              Timeline spec and CapCut draft format notes
-assets/                  Example timeline and clip templates
+skills/capcut-timeline/
+  SKILL.md               Instructions the agent reads
+  scripts/capcut.ts      CLI entry point
+  scripts/lib/           Draft reading, writing, templates, media probing
+  references/            Timeline spec and CapCut draft format notes
+  assets/                Example timeline and clip templates
+.claude-plugin/          Claude Code plugin and marketplace manifests
+.github/workflows/       Builds capcut-timeline.zip for each release
 ```
 
 ## Disclaimer

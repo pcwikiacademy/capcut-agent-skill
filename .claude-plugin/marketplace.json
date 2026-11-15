@@ -1,0 +1,14 @@
+{
+  "name": "pcwikiacademy",
+  "owner": {
+    "name": "pcwikiacademy"
+  },
+  "plugins": [
+    {
+      "name": "capcut-timeline",
+      "source": "./",
+      "description": "Build and inspect CapCut desktop timelines by writing the project's draft files directly.",
+      "version": "1.0.0"
+    }
+  ]
+}

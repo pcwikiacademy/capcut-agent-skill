@@ -1,0 +1,11 @@
+{
+  "name": "capcut-timeline",
+  "description": "Build and inspect CapCut desktop timelines by writing the project's draft files directly.",
+  "version": "1.0.0",
+  "author": {
+    "name": "pcwikiacademy"
+  },
+  "homepage": "https://github.com/pcwikiacademy/capcut-agent-skill",
+  "repository": "https://github.com/pcwikiacademy/capcut-agent-skill",
+  "keywords": ["capcut", "video", "editing", "timeline"]
+}
