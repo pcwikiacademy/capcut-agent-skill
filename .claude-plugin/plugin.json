@@ -7,5 +7,6 @@
   },
   "homepage": "https://github.com/pcwikiacademy/capcut-agent-skill",
   "repository": "https://github.com/pcwikiacademy/capcut-agent-skill",
+  "license": "MIT",
   "keywords": ["capcut", "video", "editing", "timeline"]
 }

@@ -96,6 +96,10 @@ skills/capcut-timeline/
 .github/workflows/       Builds capcut-timeline.zip for each release
 ```
 
+## License
+
+[MIT](LICENSE)
+
 ## Disclaimer
 
 Not affiliated with or endorsed by CapCut or ByteDance. The draft format is undocumented and may change between CapCut versions; always keep backups.
