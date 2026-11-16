@@ -35,17 +35,18 @@ It detects the agents on your machine and asks where to install. Add `-g` to ins
 
 ### Claude Code plugin
 
-Inside Claude Code:
-
-```
-/plugin install capcut-timeline --marketplace pcwikiacademy/capcut-agent-skill
-```
-
-On older Claude Code versions, run these two instead:
+Inside Claude Code, add the marketplace, then install the plugin from it:
 
 ```
 /plugin marketplace add pcwikiacademy/capcut-agent-skill
 /plugin install capcut-timeline@pcwikiacademy
+```
+
+Or from a terminal:
+
+```
+claude plugin marketplace add pcwikiacademy/capcut-agent-skill
+claude plugin install capcut-timeline@pcwikiacademy
 ```
 
 ### Manual download (no terminal)
